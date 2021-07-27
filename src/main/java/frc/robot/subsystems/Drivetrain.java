@@ -7,21 +7,21 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
 
 public class Drivetrain extends SubsystemBase {
   /** Creates a new Drivetrain. */
 
-  public TalonSRX frontRight;
-  public TalonSRX frontLeft;
-  public TalonSRX backRight;
-  public TalonSRX backLeft;
+  public TalonFX frontRight;
+  public TalonFX frontLeft;
+  public TalonFX backRight;
+  public TalonFX backLeft;
 
   public Drivetrain() {
-    frontRight = new TalonSRX(0);
-    frontLeft = new TalonSRX(1);
-    backRight = new TalonSRX(2);
-    backLeft = new TalonSRX(3);
+    frontRight = new TalonFX(0);
+    frontLeft = new TalonFX(1);
+    backRight = new TalonFX(2);
+    backLeft = new TalonFX(3);
 
     backRight.follow(frontRight);
     backLeft.follow(frontLeft);
